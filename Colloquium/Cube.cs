@@ -22,13 +22,6 @@ namespace Colloquium
             x = X; y = Y;
         }
 
-        public bool CheckRight(int X, int Y, int Z)//проверяет правильность координат
-        {
-            return x >= X && x < X + length &&
-                   y >= Y && y < Y + width &&
-                   z >= Z && z < Z + height;
-        }
-
         public string Print()
         {
             return $"{GetType().Name}: длинна={length}, ширина={width}, высота={height}, координаты: ({x},{y},{z})";
@@ -46,10 +39,7 @@ namespace Colloquium
         {
             return obj.x >= this.x &&
                    obj.y >= this.y &&
-                   obj.z >= this.z &&
-                   obj.x + obj.width <= this.x + this.width &&
-                   obj.y + obj.height <= this.y + this.height &&
-                   obj.z + obj.length <= this.z + this.length;
+                   obj.z >= this.z;
         }
     }
 }

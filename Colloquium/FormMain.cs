@@ -25,7 +25,23 @@ namespace Colloquium
 
         private void buttonCreateSea_Click(object sender, EventArgs e)
         {
-            sea = new Sea(w,length.h,x,y,z);
+            FormCreate formCreate = new FormCreate();
+            if (formCreate.ShowDialog() == DialogResult.OK)
+            {
+                sea = new Sea(
+                    FormCreate.WidthValue,
+                    FormCreate.LengthValue,
+                    FormCreate.HeightValue,
+                    FormCreate.XCoord,
+                    FormCreate.YCoord,
+                    FormCreate.ZCoord);
+            }
+            listBoxObject.Items.Add(sea.Print());
+        }
+
+        private void buttonCreateIsland_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

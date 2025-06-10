@@ -48,7 +48,7 @@
             this.listBoxObject.FormattingEnabled = true;
             this.listBoxObject.Location = new System.Drawing.Point(27, 12);
             this.listBoxObject.Name = "listBoxObject";
-            this.listBoxObject.Size = new System.Drawing.Size(231, 420);
+            this.listBoxObject.Size = new System.Drawing.Size(412, 420);
             this.listBoxObject.TabIndex = 1;
             // 
             // buttonCreateIsland
@@ -59,6 +59,7 @@
             this.buttonCreateIsland.TabIndex = 2;
             this.buttonCreateIsland.Text = "создать остров";
             this.buttonCreateIsland.UseVisualStyleBackColor = true;
+            this.buttonCreateIsland.Click += new System.EventHandler(this.buttonCreateIsland_Click);
             // 
             // FormMain
             // 
