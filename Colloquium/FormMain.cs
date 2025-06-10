@@ -13,6 +13,7 @@ namespace Colloquium
     public partial class FormMain : Form
     {
         Sea sea;
+        Cube cube;
         public FormMain()
         {
             InitializeComponent();
@@ -41,7 +42,25 @@ namespace Colloquium
 
         private void buttonCreateIsland_Click(object sender, EventArgs e)
         {
-
+            FormCreate formCreate = new FormCreate();
+            if (formCreate.ShowDialog() == DialogResult.OK)
+            {
+                cube = new Sea(
+                    FormCreate.WidthValue,
+                    FormCreate.LengthValue,
+                    FormCreate.HeightValue,
+                    FormCreate.XCoord,
+                    FormCreate.YCoord,
+                    FormCreate.ZCoord);
+            }
+            if (!sea.CheckIn(cube))
+            {
+                MessageBox.Show("Остров вне моря, введите верные координаты","Ошибка создания");
+            }
+            else
+            {
+                listBoxObject.Items.Add(cube.Print());
+            }
         }
     }
 }

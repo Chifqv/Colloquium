@@ -43,5 +43,15 @@ namespace Colloquium
             DialogResult = DialogResult.OK;
              Close();
         }
+
+        private void labelData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
