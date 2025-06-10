@@ -19,7 +19,7 @@ namespace Colloquium
         {
             length = l; width = w;
             height = h;
-            x = X; y = Y;
+            x = X; y = Y; z = Z;
         }
 
         public string Print()
