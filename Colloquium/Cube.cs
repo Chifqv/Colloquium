@@ -39,7 +39,10 @@ namespace Colloquium
         {
             return obj.x >= this.x &&
                    obj.y >= this.y &&
-                   obj.z >= this.z;
+                   obj.z >= this.z &&
+                   obj.x + obj.width <= this.x + this.width &&
+                   obj.y + obj.height <= this.y + this.height &&
+                   obj.z + obj.length <= this.z + this.length;     
         }
     }
 }

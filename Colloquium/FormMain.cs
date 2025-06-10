@@ -28,7 +28,7 @@ namespace Colloquium
         {
             FormCreate formCreate = new FormCreate();
             if (formCreate.ShowDialog() == DialogResult.OK)
-            {
+            { 
                 sea = new Sea(
                     FormCreate.inf[0],
                     FormCreate.inf[1],

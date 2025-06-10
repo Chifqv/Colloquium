@@ -12,7 +12,7 @@ namespace Colloquium
 {
     public partial class FormCreate : Form
     {
-        public static List<int> inf;
+        public static List<int> inf;//1 - длина, 2 - ширина, 3 - высота, 4 - X, 5 - Y, 6 - Z
 
         List<string> data;
         public FormCreate()
