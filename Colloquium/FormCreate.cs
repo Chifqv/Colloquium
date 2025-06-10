@@ -12,12 +12,7 @@ namespace Colloquium
 {
     public partial class FormCreate : Form
     {
-        public static int WidthValue = 0;
-        public static int LengthValue = 0;
-        public static int HeightValue = 0;
-        public static int XCoord = 0;
-        public static int YCoord = 0;
-        public static int ZCoord = 0;
+        public static List<int> inf;
 
         List<string> data;
         public FormCreate()
@@ -32,13 +27,13 @@ namespace Colloquium
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            WidthValue = Convert.ToInt32(textBoxWidth.Text);
-            LengthValue = Convert.ToInt32(textBoxLenght.Text);
-            HeightValue = Convert.ToInt32(textBoxHeight.Text);
+            inf[0] = Convert.ToInt32(textBoxWidth.Text);
+            inf[1] = Convert.ToInt32(textBoxLenght.Text);
+            inf[2] = Convert.ToInt32(textBoxHeight.Text);
 
-            XCoord = Convert.ToInt32(textBoxX.Text);
-            YCoord = Convert.ToInt32(textBoxY.Text);
-            ZCoord = Convert.ToInt32(textBoxZ.Text);
+            inf[3] = Convert.ToInt32(textBoxX.Text);
+            inf[4] = Convert.ToInt32(textBoxY.Text);
+            inf[5] = Convert.ToInt32(textBoxZ.Text);
 
             DialogResult = DialogResult.OK;
              Close();

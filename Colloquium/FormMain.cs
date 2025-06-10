@@ -30,12 +30,12 @@ namespace Colloquium
             if (formCreate.ShowDialog() == DialogResult.OK)
             {
                 sea = new Sea(
-                    FormCreate.WidthValue,
-                    FormCreate.LengthValue,
-                    FormCreate.HeightValue,
-                    FormCreate.XCoord,
-                    FormCreate.YCoord,
-                    FormCreate.ZCoord);
+                    FormCreate.inf[0],
+                    FormCreate.inf[1],
+                    FormCreate.inf[2],
+                    FormCreate.inf[3],
+                    FormCreate.inf[4],
+                    FormCreate.inf[5]);
             }
             listBoxObject.Items.Add(sea.Print());
         }
@@ -45,13 +45,13 @@ namespace Colloquium
             FormCreate formCreate = new FormCreate();
             if (formCreate.ShowDialog() == DialogResult.OK)
             {
-                cube = new Sea(
-                    FormCreate.WidthValue,
-                    FormCreate.LengthValue,
-                    FormCreate.HeightValue,
-                    FormCreate.XCoord,
-                    FormCreate.YCoord,
-                    FormCreate.ZCoord);
+                cube = new Cube(
+                    FormCreate.inf[0],
+                    FormCreate.inf[1],
+                    FormCreate.inf[2],
+                    FormCreate.inf[3],
+                    FormCreate.inf[4],
+                    FormCreate.inf[5]);
             }
             if (!sea.CheckIn(cube))
             {
